@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANITS - Central Placement Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div id="loginPage" class="login-container">
+
+        <div class="login-box">
+
+            <h2>User Login</h2>
+
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter Username">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter Password">
+
+            <button onclick="login()">Login</button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN PORTAL -->
+    <div id="portalPage" class="portal" style="display:none;">
+
+        <!-- HEADER -->
+        <header>
+
+            <div class="college-logo">
+                <div class="logo">ANITS</div>
+
+                <div>
+                    <h1>Anil Neerukonda Institute of Technology & Sciences</h1>
+                    <h3>Campus Placement Portal</h3>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <a href="#" onclick="showSection('home')">Home</a>
+
+            <a href="#" onclick="showSection('about')">About</a>
+
+            <a href="#" onclick="showSection('jobs')">Apply Job</a>
+
+            <a href="#" onclick="showSection('results')">Results</a>
+
+            <a href="#" onclick="showSection('placements')">
+                Upcoming Placements
+            </a>
+
+            <a href="#" onclick="showSection('contact')">Contact</a>
+
+            <a href="#" onclick="logout()">Logout</a>
+
+        </nav>
+
+
+        <!-- CONTENT -->
+        <main>
+
+            <!-- HOME -->
+            <section id="home" class="section">
+
+                <div class="welcome-box">
+
+                    <h2>Login Successful!</h2>
+
+                    <h3>Welcome to ANITS Central Placement Portal</h3>
+
+                    <p>
+                        <b>Login Time:</b>
+                        <span id="loginTime"></span>
+                    </p>
+
+                    <p id="greeting"></p>
+
+                </div>
+
+
+                <div class="notice">
+
+                    <h3>📢 Important Notice</h3>
+
+                    <ul>
+
+                        <li>
+                            Please contact the Training & Placement Office regularly for updates.
+                        </li>
+
+                        <li>
+                            Stay informed about the latest recruitment process.
+                        </li>
+
+                        <li>
+                            Check your registered Email and ID for placement portal announcements.
+                        </li>
+
+                        <li>
+                            Attend all Pre-Placement Talks (PPTs), Aptitude Training,
+                            Mock Interviews and Company Drives.
+                        </li>
+
+                        <li>
+                            Keep your Resume, Academic Documents and ID Card ready
+                            before every recruitment process.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- ABOUT -->
+            <section id="about" class="section hidden">
+
+                <h2>About Placement Cell</h2>
+
+                <p>
+                    The Training and Placement Cell helps students participate
+                    in campus recruitment activities.
+                </p>
+
+                <p>
+                    Students can view job opportunities, apply for companies,
+                    check placement results and view upcoming recruitment drives.
+                </p>
+
+            </section>
+
+
+            <!-- JOBS -->
+            <section id="jobs" class="section hidden">
+
+                <h2>Available Jobs</h2>
+
+                <div class="job">
+
+                    <h3>Software Developer</h3>
+
+                    <p>Company: ABC Technologies</p>
+                    <p>Package: ₹6 LPA</p>
+
+                    <button onclick="applyJob('Software Developer')">
+                        Apply
+                    </button>
+
+                </div>
+
+
+                <div class="job">
+
+                    <h3>Web Developer</h3>
+
+                    <p>Company: XYZ Solutions</p>
+                    <p>Package: ₹5 LPA</p>
+
+                    <button onclick="applyJob('Web Developer')">
+                        Apply
+                    </button>
+
+                </div>
+
+                <p id="applyMessage"></p>
+
+            </section>
+
+
+            <!-- RESULTS -->
+            <section id="results" class="section hidden">
+
+                <h2>Placement Results</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Company</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>Rahul</td>
+                        <td>ABC Technologies</td>
+                        <td>Selected</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya</td>
+                        <td>XYZ Solutions</td>
+                        <td>Selected</td>
+                    </tr>
+
+                    <tr>
+                        <td>Arjun</td>
+                        <td>Tech Solutions</td>
+                        <td>Selected</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+
+            <!-- UPCOMING PLACEMENTS -->
+            <section id="placements" class="section hidden">
+
+                <h2>Upcoming Placement Drives</h2>
+
+                <ul class="placement-list">
+
+                    <li>
+                        <b>ABC Technologies</b> - 25 September 2026
+                    </li>
+
+                    <li>
+                        <b>XYZ Solutions</b> - 30 September 2026
+                    </li>
+
+                    <li>
+                        <b>Tech Solutions</b> - 5 October 2026
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- CONTACT -->
+            <section id="contact" class="section hidden">
+
+                <h2>Contact</h2>
+
+                <p>
+                    <b>Training & Placement Office</b>
+                </p>
+
+                <p>
+                    Email: placement@anits.edu.in
+                </p>
+
+                <p>
+                    Phone: +91 98765 43210
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                © 2026 ANITS Central Placement Portal
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
